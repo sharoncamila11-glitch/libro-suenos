@@ -56,8 +56,14 @@
         margin-top: 10px;
     }
 
-    .social-box {
-        margin-top: 40px;
+    .button {
+        background: #d4af37;
+        color: #000;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     .social-link {
@@ -65,10 +71,6 @@
         font-size: 20px;
         text-decoration: none;
         font-weight: bold;
-    }
-
-    .social-link:hover {
-        opacity: 0.7;
     }
 </style>
 </head>
@@ -82,17 +84,13 @@
     <p><strong>Editorial:</strong> Independently Published</p>
 </div>
 
-<!-- SECCIÓN DE COMENTARIOS PRIVADOS -->
+<!-- SECCIÓN DE COMENTARIOS -->
 <div class="info-box">
     <h2>Envíame tus comentarios</h2>
     <p>Tu mensaje me llegará de forma privada a mi correo.</p>
 
     <form action="https://formsubmit.co/sharoncamila11@gmail.com" method="POST">
-        
-        <!-- Evita spam -->
         <input type="hidden" name="_captcha" value="false">
-
-        <!-- Redirección después de enviar -->
         <input type="hidden" name="_next" value="https://sharoncamila11.github.io">
 
         <input type="text" name="nombre" placeholder="Tu nombre" required><br>
@@ -104,14 +102,53 @@
 </div>
 
 <!-- REDES SOCIALES -->
-<div class="social-box">
+<div class="info-box">
     <h3>Sígueme en redes</h3>
-
-    <a class="social-link" 
-       href="https://instagram.com/duakvothe" 
-       target="_blank">
+    <a class="social-link" href="https://instagram.com/duakvothe" target="_blank">
        📸 Instagram: @duakvothe
     </a>
+</div>
+
+<!-- DONACIONES PARA LOS PERRITOS -->
+<div class="info-box" style="margin-top:50px;">
+    <h2 style="color:#d4af37;">Apoya a los Perritos Rescatados 🐾</h2>
+
+    <p style="font-size:17px; line-height:1.5;">
+        <strong>"Sueños Proféticos"</strong> nació con un propósito especial:
+        transformar experiencias espirituales en ayuda real para los perritos que
+        hoy necesitan refugio, comida, medicinas y un lugar seguro donde sanar.
+    </p>
+
+    <p style="font-size:17px; line-height:1.5; margin-top:15px;">
+        Cada donación, por pequeña que sea, <strong>cambia una vida</strong>.
+        Tu apoyo se convierte en alimento, vacunas, esterilizaciones
+        y rescates urgentes para perritos abandonados.
+    </p>
+
+    <p style="font-size:17px; margin-top:15px; color:#d4af37;">
+        Si este libro resonó contigo, si alguna vez un animalito te tocó el corazón,
+        o si simplemente deseas devolver un poco de luz al mundo…
+        esta es tu oportunidad.
+    </p>
+
+    <!-- BOTÓN DE DONAR ACTIVADO -->
+    <a class="button" 
+       href="https://www.paypal.com/qrcodes/p2pqrc/6WMPE9LRZ3JDS" 
+       target="_blank">
+       💛 Donar para los Perritos
+    </a>
+
+    <p style="margin-top:20px; font-size:15px;">O escanea este código QR:</p>
+
+    <!-- QR PAYPAL -->
+    <img src="QR_SHARON_PAYPAL.png" 
+         alt="QR PayPal" 
+         style="width:200px; border-radius:10px;">
+
+    <p style="font-size:14px; margin-top:10px; opacity:0.8;">
+        Todo lo recaudado se destina exclusivamente a los perritos rescatados.
+        Gracias por ser parte de esta misión. 🐶✨
+    </p>
 </div>
 
 </body>
