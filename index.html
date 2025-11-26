@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Libro de Sueños Proféticos — Sharon Camila</title>
+  <meta name="description" content="Libro de sueños proféticos de Sharon Camila: recopilación de sueños, interpretaciones y visiones. Sueños que guían.">
+  <link rel="icon" href="favicon.ico" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Libro de Sueños Proféticos — Sharon Camila" />
+  <meta property="og:description" content="Sueños, símbolos y predicciones: una colección para quienes buscan guía a través del sueño." />
+  <meta property="og:image" content="cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts (cambia si quieres otra) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1720;
+      --card:#0b1220;
+      --muted:#aab3bf;
+      --accent:#e6c07b;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071028 0%, #071426 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    header{
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(7,10,20,0.6), rgba(7,10,20,0.35));
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      z-index:50;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:1rem;}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:1rem;
+    }
+    .brand{display:flex;align-items:center;gap:.8rem;}
+    .brand img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+    .brand h1{font-family:'Playfair Display',serif;margin:0;font-size:1.05rem}
+    nav ul{display:flex;gap:.6rem;list-style:none;padding:0;margin:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;padding:.5rem .6rem;border-radius:6px}
+    nav a:hover{color:#fff;background:var(--glass)}
+    .cta{background:var(--accent);color:#061018;padding:.5rem .8rem;border-radius:8px;text-decoration:none;font-weight:700}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+    .hero .lead h2{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 .6rem}
+    .hero .lead p{color:var(--muted);margin:0 0 1.2rem}
+    .book-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.2rem;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .cover{width:100%;border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .cover img{display:block;width:100%;height:auto}
+    .buttons{display:flex;gap:.6rem;margin-top:.8rem}
+    .btn{padding:.55rem .75rem;border-radius:8px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .btn-primary{background:var(--accent);color:#061018}
+    /* Sections */
+    section{padding:3rem 0;border-top:1px solid rgba(255,255,255,0.02)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .muted{color:var(--muted);font-size:.95rem}
+    footer{padding:2rem 0;color:var(--muted);font-size:.9rem}
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:1.2rem}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      nav ul{display:none}
+      .grid-3{grid-template-columns:1fr}
+      .brand h1{font-size:.95rem}
+    }
+    /* Simple modal */
+    .modal{
+      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+      background:rgba(2,6,12,0.6);visibility:hidden;opacity:0;transition:all .18s;
+      z-index:120;
+    }
+    .modal.open{visibility:visible;opacity:1}
+    .modal .panel{width:92%;max-width:560px;background:#071024;padding:1.2rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .close{background:transparent;border:0;color:var(--muted);font-weight:700;cursor:pointer}
+    /* small helpers */
+    .kicker{color:var(--accent);font-weight:700;letter-spacing:.06em}
+    .excerpt{font-style:italic;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Principal">
+      <div class="brand" aria-hidden="false">
+        <img src="cover-thumb.jpg" alt="Portada del libro — miniatura">
+        <div>
+          <h1>Libro de Sueños Proféticos</h1>
+          <div class="muted">Sharon Camila Rosado Sosa</div>
+        </div>
+      </div>
+
+      <nav aria-label="Enlaces principales">
+        <ul>
+          <li><a href="#about">Acerca</a></li>
+          <li><a href="#suenos">Sueños</a></li>
+          <li><a href="#extractos">Extractos</a></li>
+          <li><a href="#comprar">Comprar</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <a class="cta" href="#comprar">Comprar / Descargar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="lead">
+        <div class="kicker">Nuevo</div>
+        <h2 id="hero-title">Libro de Sueños Proféticos — visiones, símbolos y guía</h2>
+        <p class="muted">Una colección íntima de sueños premonitorios, interpretaciones y relatos personales. Este libro ofrece mapas simbólicos para quienes buscan entender las voces del sueño.</p>
+        <div style="display:flex;gap:.6rem;align-items:center;">
+          <a class="btn btn-primary" href="#comprar">Comprar ahora</a>
+          <button class="btn btn-outline" id="open-sample">Leer extracto</button>
+        </div>
+
+        <div style="margin-top:1.4rem">
+          <strong>Formato:</strong> Impreso / eBook · <strong>Género:</strong> Espiritualidad / Sueños · <strong>ISBN:</strong> 000-0-00-000000-0
+        </div>
+      </div>
+
+      <aside class="book-card" aria-label="Portada y detalles del libro">
+        <div class="cover" role="img" aria-label="Portada del libro">
+          <img src="cover.jpg" alt="Portada del Libro de Sueños Proféticos — Sharon Camila">
+        </div>
+        <div style="margin-top:1rem;display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-weight:700">Libro de Sueños Proféticos</div>
+            <div class="muted" style="font-size:.9rem">por Sharon Camila</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-weight:800;font-size:1.1rem">MX$249</div>
+            <div class="muted" style="font-size:.8rem">eBook MX$99</div>
+          </div>
+        </div>
+
+        <div class="buttons" style="margin-top:1rem">
+          <a class="btn btn-primary" href="#comprar">Comprar</a>
+          <a class="btn btn-outline" href="#suenos">Ver archivo de sueños</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">Acerca del libro</h2>
+      <p class="muted">
+        Este libro reúne sueños vividos por la autora, interpretaciones simbólicas y relatos que se entrelazan con eventos reales. Pensado para quien busca una guía onírica con un pie en la intuición y otro en la narrativa personal.
+      </p>
+
+      <div class="grid-3" style="margin-top:1rem">
+        <div class="card">
+          <h3>¿Por qué leerlo?</h3>
+          <p class="muted">Porque ofrece claves prácticas para reconocer patrones oníricos y tomar decisiones con más claridad.</p>
+        </div>
+        <div class="card">
+          <h3>Qué encontrarás</h3>
+          <ul class="muted">
+            <li>Relatos ordenados por símbolo y fecha</li>
+            <li>Interpretaciones personales y arquetípicas</li>
+            <li>Guías para anotar tus sueños</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Sobre la autora</h3>
+          <p class="muted">Sharon Camila Rosado Sosa — canalizadora de sueños y cronista de visiones. Nacida el 7 de noviembre de 2002.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DREAMS ARCHIVE -->
+    <section id="suenos" aria-labelledby="suenos-h">
+      <h2 id="suenos-h">Archivo de sueños</h2>
+      <p class="muted">Explora una selección de sueños ordenados por símbolo y fecha. (Este bloque puede transformarse en una base de datos o blog dinámico más adelante.)</p>
+
+      <div style="margin-top:1rem">
+        <!-- ejemplo de items -->
+        <article class="card" style="margin-bottom:1rem">
+          <strong>15 oct 2025 — Sueño de la serpiente</strong>
+          <p class="muted excerpt">Soñé una serpiente que me miraba fijamente; no me atacó, pero su presencia fue un aviso. Interpretación y eventos relacionados...</p>
+          <a href="#" class="muted">Leer completo →</a>
+        </article>
+
+        <article class="card" style="margin-bottom:1rem">
+          <strong>7 jul 2025 — Número 15</strong>
+          <p class="muted excerpt">El número 15 apareció repetidamente. El sueño parecía conectar con decisiones financieras y cambios.</p>
+          <a href="#" class="muted">Leer completo →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXCERPT / SAMPLE -->
+    <section id="extractos" aria-labelledby="ext-h">
+      <h2 id="ext-h">Extractos</h2>
+      <div class="grid-3" style="margin-top:1rem">
+        <div class="card">
+          <h4>Capítulo 1 — Los símbolos</h4>
+          <p class="muted excerpt">"La primera noche supe que el sueño no era solo sueño. Había patrón, color y un nombre escrito en la boca del río."</p>
+          <a class="muted" href="#open-sample">Leer más →</a>
+        </div>
+        <div class="card">
+          <h4>Capítulo 4 — Señales</h4>
+          <p class="muted excerpt">"Las señales llegan en canciones, números y sabores. Aprendí a reconocerlas y a anotar hasta el menor detalle."</p>
+          <a class="muted" href="#open-sample">Leer más →</a>
+        </div>
+        <div class="card">
+          <h4>Conclusión — Preparación</h4>
+          <p class="muted excerpt">"Este libro es un manual para quien escucha. No promete certezas, ofrece mapas."</p>
+          <a class="muted" href="#open-sample">Leer más →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUY / DOWNLOAD -->
+    <section id="comprar" aria-labelledby="buy-h">
+      <h2 id="buy-h">Comprar / Descargar</h2>
+      <div class="card" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+        <div style="flex:1;min-width:220px">
+          <h3>Edición impresa</h3>
+          <p class="muted">Tapa blanda — 220 páginas · Entrega en México y envío internacional (consulta tarifas)</p>
+          <div style="font-weight:800;font-size:1.2rem">MX$249</div>
+          <a class="btn btn-primary" href="#" style="margin-top:.6rem">Comprar impreso</a>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <h3>eBook</h3>
+          <p class="muted">Formato EPUB / PDF — descarga instantánea después de la compra.</p>
+          <div style="font-weight:800;font-size:1.2rem">MX$99</div>
+          <a class="btn btn-outline" href="#">Comprar eBook</a>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:.8rem">Si quieres presentaciones en vivo, consultas de interpretación o una lectura personalizada basada en tus sueños, escríbeme al contacto.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contacto & Suscripción</h2>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <form class="card" style="flex:1;min-width:280px" aria-label="Formulario de contacto">
+          <label class="muted">Nombre
+            <input type="text" name="name" placeholder="Tu nombre" style="width:100%;margin-top:.4rem;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#071022;color:#fff">
+          </label>
+          <label class="muted" style="margin-top:.6rem;display:block">Email
+            <input type="email" name="email" placeholder="tu@email.com" style="width:100%;margin-top:.4rem;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#071022;color:#fff">
+          </label>
+          <label class="muted" style="margin-top:.6rem;display:block">Mensaje
+            <textarea name="message" rows="4" placeholder="Escribe aquí" style="width:100%;margin-top:.4rem;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#071022;color:#fff"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" style="margin-top:.8rem">Enviar mensaje</button>
+        </form>
+
+        <div class="card" style="flex:1;min-width:260px">
+          <h4>Suscríbete al boletín</h4>
+          <p class="muted">Recibe extractos exclusivos, fechas de lanzamiento y sueños nuevos en tu email.</p>
+          <label class="muted">Tu email
+            <input type="email" placeholder="tu@email.com" style="width:100%;margin-top:.4rem;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#071022;color:#fff">
+          </label>
+          <button class="btn btn-outline" style="margin-top:.6rem">Suscribirme</button>
+
+          <div style="margin-top:1rem" class="muted">
+            Redes: <br/>
+            Instagram · @tuusuario<br/>TikTok · @tuusuario<br/>Correo: contacto@tucorreo.com
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div>
+          © <strong>Sharon Camila</strong> — Libro de Sueños Proféticos · Todos los derechos reservados.
+        </div>
+        <div class="muted">Diseño: plantilla personalizada · Idioma: Español</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal sample extract -->
+  <div id="sample-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Extracto — Capítulo 1</strong>
+        <button class="close" id="close-modal">Cerrar ✕</button>
+      </div>
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:.6rem 0">
+      <p class="muted">La noche en la que empecé a llevar registro, la luna tenía una cicatriz. Anoté cada detalle: la textura, el sonido, los números que aparecían. El sueño no era una historia: era un archivo.</p>
+      <p class="muted">Si deseas leer el capítulo completo, puedes descargar el eBook o solicitar el extracto completo vía contacto.</p>
+    </div>
+  </div>
+
+  <script>
+    // simple interactions
+    document.getElementById('open-sample').addEventListener('click', function(e){
+      e.preventDefault();
+      const m = document.getElementById('sample-modal');
+      m.classList.add('open');
+      m.setAttribute('aria-hidden','false');
+    });
+    document.getElementById('close-modal').addEventListener('click', function(){
+      const m = document.getElementById('sample-modal');
+      m.classList.remove('open');
+      m.setAttribute('aria-hidden','true');
+    });
+    // basic form handling (placeholder)
+    document.querySelectorAll('form').forEach(f=>{
+      f.addEventListener('submit', e=>{
+        e.preventDefault();
+        alert('Gracias — en un sitio real el formulario enviaría el mensaje a tu email o CRM.');
+      });
+    });
+  </script>
+</body>
+</html>
